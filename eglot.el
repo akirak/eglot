@@ -176,7 +176,9 @@ language-server/bin/php-language-server.php"))
                                 (java-mode . ("jdtls"))
                                 (dart-mode . ("dart" "language-server"
                                               "--client-id" "emacs.eglot-dart"))
-                                (elixir-mode . ("language_server.sh"))
+                                (elixir-mode . ,(eglot-alternatives
+                                                 '("language_server.sh"
+                                                   "elixir-ls")))
                                 (ada-mode . ("ada_language_server"))
                                 (scala-mode . ("metals-emacs"))
                                 (svelte-mode . ("svelteserver" "--stdio"))
